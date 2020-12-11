@@ -5,8 +5,8 @@ Wikimedia foundation for the nice pictures
 Creators of an-array-of-english-words for the random words
 */
 
-function getJSON("words.json") {
-    return fetch("words.json").then(response => response.json());
+function getJSON(url) {
+    return fetch(url).then(response => response.json());
 }
 
 // load JSON data; then proceed

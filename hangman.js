@@ -5,9 +5,16 @@ Wikimedia foundation for the nice pictures
 Creators of an-array-of-english-words for the random words
 */
 
-fetch("./words.json").then(a => a.json())
-  .then(data => var wordArray = data)
-  .catch(e => console.log("Womp womp"))
+let wordArray = [];
+
+function getJson(url, callback {
+	fetch(url)
+		.then(a => a.json())
+	  	.then(data => callback(data))
+	  	.catch(e => console.log("Womp womp"));
+}
+
+getJson("./words.json", (words) => wordsArray = words);
 
 function randomWords() {
 	return wordArray[Math.floor(Math.random()*wordArray.length)];	

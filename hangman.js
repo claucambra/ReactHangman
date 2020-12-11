@@ -9,14 +9,12 @@ function getJSON(url) {
     return fetch(url).then(response => response.json());
 }
 
-// load JSON data; then proceed
 getJSON("words.json").then(data => {
-    // assign allQuestions with data
     wordArray = data;  
 }
 
 
-function randomWords() {
+const randomWords = () => {
 	return wordArray[Math.floor(Math.random()*wordArray.length)];	
 }
 

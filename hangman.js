@@ -8,7 +8,7 @@ Creators of an-array-of-english-words for the random words
 const wordArray = [];
 
 fetch("./words.json").then(a => a.json())
-  .then(data => console.log(data))
+  .then(data => wordArray = data)
   .catch(e => console.log("Womp womp"))
 
 function randomWords() {

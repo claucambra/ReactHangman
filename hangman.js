@@ -16,7 +16,7 @@ getJSON("words.json").then(data => {
 })
 
 
-const randomWords = () => {
+function randomWords() {
 	return wordArray[Math.floor(Math.random()*wordArray.length)];	
 }
 

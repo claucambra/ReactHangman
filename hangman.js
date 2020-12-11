@@ -5,7 +5,7 @@ Wikimedia foundation for the nice pictures
 Creators of an-array-of-english-words for the random words
 */
 
-import * as wordArray from "words.json"
+const wordArray = JSON.parse(words);
 
 function randomWords() {
 	return wordArray[Math.floor(Math.random()*wordArray.length)];	

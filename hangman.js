@@ -5,13 +5,15 @@ Wikimedia foundation for the nice pictures
 Creators of an-array-of-english-words for the random words
 */
 
+let wordArray = [];
+
 function getJSON(url) {
     return fetch(url).then(response => response.json());
 }
 
 getJSON("words.json").then(data => {
     wordArray = data;  
-}
+})
 
 
 const randomWords = () => {

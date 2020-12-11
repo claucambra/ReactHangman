@@ -5,14 +5,12 @@ Wikimedia foundation for the nice pictures
 Creators of an-array-of-english-words for the random words
 */
 
-let wordArray =[];
-
 fetch("./words.json").then(a => a.json())
-  .then(data => console.log("data")
+  .then(data => randomWords("data")
   .catch(e => console.log("Womp womp"))
 
-function randomWords() {
-	return wordArray[Math.floor(Math.random()*wordArray.length)];	
+function randomWords(array) {
+	return array[Math.floor(Math.random()*array.length)];	
 }
 
 class Application extends React.Component {

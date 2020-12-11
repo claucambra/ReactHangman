@@ -14,7 +14,7 @@ function getJson(url, callback) {
 	  	.catch(e => console.log("Womp womp"));
 }
 
-getJson("./words.json", (words) => wordsArray = JSON.parse(words));
+getJson("./words.json", (words) => console.log(words));
 
 function randomWords() {
 	return wordArray[Math.floor(Math.random()*wordArray.length)];	

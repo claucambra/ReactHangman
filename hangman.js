@@ -122,30 +122,30 @@ class ManWindow extends React.Component {
 		super(props);
 	}
 	
-	picture = <img src={`https://upload.wikimedia.org/wikipedia/commons/8/8b/Hangman-0.png`}/>
+	picture = <img src={`images/Hangman-0.png`}/>
 	
 	person(fails) {
 		switch (fails) {
 			case 1:
-				this.picture = <img src={`https://upload.wikimedia.org/wikipedia/commons/3/30/Hangman-1.png`}/>
+				this.picture = <img src={`images/Hangman-1.png`}/>
 				break;
 			case 2:
-				this.picture = <img src={`https://upload.wikimedia.org/wikipedia/commons/7/70/Hangman-2.png`}/>
+				this.picture = <img src={`images/Hangman-2.png`}/>
 				break;
 			case 3:
-				this.picture = <img src={`https://upload.wikimedia.org/wikipedia/commons/9/97/Hangman-3.png`}/>
+				this.picture = <img src={`images/Hangman-3.png`}/>
 				break;
 			case 4:
-				this.picture = <img src={`https://upload.wikimedia.org/wikipedia/commons/2/27/Hangman-4.png`}/>
+				this.picture = <img src={`images/Hangman-4.png`}/>
 				break;
 			case 5:
-				this.picture = <img src={`https://upload.wikimedia.org/wikipedia/commons/6/6b/Hangman-5.png`}/>
+				this.picture = <img src={`images/Hangman-5.png`}/>
 				break;
 			case 6:
-				this.picture = <img src={`https://upload.wikimedia.org/wikipedia/commons/d/d6/Hangman-6.png`}/>
+				this.picture = <img src={`images/Hangman-6.png`}/>
 				break;
 			default:
-				this.picture = <img src={`https://upload.wikimedia.org/wikipedia/commons/8/8b/Hangman-0.png`}/>
+				this.picture = <img src={`images/Hangman-0.png`}/>
 				break;
 		}
 	}

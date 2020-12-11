@@ -11,7 +11,7 @@ fetch("./words.json").then(a => a.json())
   .then(data => wordArray = [...data])
 
 function randomWords() {
-	return wordArray[Math.floor(Math.random()*inArray.length)];	
+	return wordArray[Math.floor(Math.random()*wordArray.length)];	
 }
 
 class Application extends React.Component {

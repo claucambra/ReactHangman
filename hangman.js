@@ -7,7 +7,7 @@ Creators of an-array-of-english-words for the random words
 
 let wordArray = [];
 
-function getJson(url, callback {
+function getJson(url, callback) {
 	fetch(url)
 		.then(a => a.json())
 	  	.then(data => callback(data))

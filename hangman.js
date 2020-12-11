@@ -5,8 +5,6 @@ Wikimedia foundation for the nice pictures
 Creators of randomWords for the random words
 */
 
-import randomWords from 'https://cdn.skypack.dev/random-words@1.1.1';
-
 class Application extends React.Component {
 	constructor(props) {
 		super (props);

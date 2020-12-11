@@ -6,7 +6,7 @@ Creators of an-array-of-english-words for the random words
 */
 
 fetch("./words.json").then(a => a.json())
-  .then(data => randomWords("data")
+  .then(data => randomWords("data"))
   .catch(e => console.log("Womp womp"))
 
 function randomWords(array) {

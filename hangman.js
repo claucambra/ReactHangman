@@ -12,7 +12,6 @@ fetch("./words.json").then(a => a.json())
   .then(() => {
 	
 function randomWords() {
-	console.log(wordArray);
 	return wordArray[Math.floor(Math.random()*wordArray.length)];	
 }
 

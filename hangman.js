@@ -5,8 +5,10 @@ Wikimedia foundation for the nice pictures
 Creators of an-array-of-english-words for the random words
 */
 
+let wordsArray = [];
+
 fetch('https://raw.githubusercontent.com/words/an-array-of-english-words/master/index.json').then(words => words.json())
-  .then(data => let wordArray = data)
+  .then(data => wordArray = data)
   .catch(e => console.log("JSON failed to load."))
 
 function randomWords() {

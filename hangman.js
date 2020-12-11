@@ -8,7 +8,7 @@ Creators of an-array-of-english-words for the random words
 let wordArray;
 
 fetch("./words.json").then(a => a.json())
-  .then(data => wordArray = JSON.parse(data))
+  .then(data => console.log(JSON.parse(data)))
 
 function randomWords() {
 	console.log(wordArray);

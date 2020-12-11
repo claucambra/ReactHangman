@@ -5,10 +5,10 @@ Wikimedia foundation for the nice pictures
 Creators of an-array-of-english-words for the random words
 */
 
-let wordArray = ["a","b","c"];
+let wordArray = [];
 
-/*fetch("./words.json").then(a => a.json())
-  .then(data => wordArray = [...data])*/
+fetch("./words.json").then(a => a.json())
+  .then(data => wordArray = [...JSON.parse(data)])
 
 function randomWords() {
 	console.log(wordArray[Math.floor(Math.random()*wordArray.length)]);

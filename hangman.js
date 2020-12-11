@@ -20,7 +20,7 @@ function loadJSON(callback) {
 }
 
 loadJSON(function(json) {
-  wordArray = json; // this will log out the json object
+  wordArray = JSON.parse(json); // this will log out the json object
 });
 
 function randomWords() {

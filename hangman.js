@@ -5,7 +5,23 @@ Wikimedia foundation for the nice pictures
 Creators of an-array-of-english-words for the random words
 */
 
-const wordArray = JSON.parse();
+const wordArray = [];
+
+function loadJSON(callback) {   
+  var xobj = new XMLHttpRequest();
+  xobj.overrideMimeType("application/json");
+  xobj.open('GET', 'words.json', true);
+  xobj.onreadystatechange = function () {
+    if (xobj.readyState == 4 && xobj.status == "200") {
+      callback(JSON.parse(xobj.responseText));
+    }
+  };
+  xobj.send(null);  
+}
+
+loadJSON(function(json) {
+  wordArray = json; // this will log out the json object
+});
 
 function randomWords() {
 	return wordArray[Math.floor(Math.random()*wordArray.length)];	

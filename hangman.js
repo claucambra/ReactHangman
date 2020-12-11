@@ -7,21 +7,9 @@ Creators of an-array-of-english-words for the random words
 
 const wordArray = [];
 
-function loadJSON(callback) {   
-  var xobj = new XMLHttpRequest();
-  xobj.overrideMimeType("application/json");
-  xobj.open('GET', './words.json', true);
-  xobj.onreadystatechange = function () {
-    if (xobj.readyState == 4 && xobj.status == "200") {
-      callback(JSON.parse(xobj.responseText));
-    }
-  };
-  xobj.send(null);  
-}
-
-loadJSON(function(json) {
-  wordArray = JSON.parse(json); // this will log out the json object
-});
+fetch("./words.json").then(a => a.json())
+  .then(data => console.log(data))
+  .catch(e => console.log("Womp womp"))
 
 function randomWords() {
 	return wordArray[Math.floor(Math.random()*wordArray.length)];	

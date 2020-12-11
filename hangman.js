@@ -7,10 +7,6 @@ Creators of an-array-of-english-words for the random words
 
 let wordArray;
 
-fetch("./words.json").then(a => a.json())
-  .then(data => wordArray = data)
-  .then(
-
 function randomWords() {
 	console.log(wordArray);
 	return wordArray[Math.floor(Math.random()*wordArray.length)];	
@@ -198,5 +194,6 @@ class InputSection extends React.Component {
 	}
 }
 
-
-ReactDOM.render(<Application />, document.getElementById('container')););
+fetch("./words.json").then(a => a.json())
+  .then(data => wordArray = data)
+  .then( ReactDOM.render(<Application />, document.getElementById('container')) );

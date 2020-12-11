@@ -5,7 +5,7 @@ Wikimedia foundation for the nice pictures
 Creators of an-array-of-english-words for the random words
 */
 
-let wordArray;
+let wordArray = [];
 
 function randomWords() {
 	console.log(wordArray);

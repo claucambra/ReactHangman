@@ -11,7 +11,7 @@ fetch("./words.json").then(a => a.json())
   .then(data => wordArray = [...JSON.parse(data)])
 
 function randomWords() {
-	console.log(wordArray[Math.floor(Math.random()*wordArray.length)]);
+	console.log(wordArray);
 	return wordArray[Math.floor(Math.random()*wordArray.length)];	
 }
 

@@ -2,8 +2,14 @@
 
 Thanks to:
 Wikimedia foundation for the nice pictures
-Creators of randomWords for the random words
+Creators of an-array-of-english-words for the random words
 */
+
+wordArray = await (await fetch("https://raw.githubusercontent.com/words/an-array-of-english-words/master/index.json")).json();
+
+function randomWords() {
+	return wordArray[Math.floor(Math.random()*wordArray.length)];	
+}
 
 class Application extends React.Component {
 	constructor(props) {

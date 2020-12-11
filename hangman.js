@@ -5,7 +5,7 @@ Wikimedia foundation for the nice pictures
 Creators of an-array-of-english-words for the random words
 */
 
-const wordArray = [];
+var wordArray = [];
 
 fetch("./words.json").then(a => a.json())
   .then(data => wordArray = data)
